@@ -131,7 +131,11 @@ body {
     transition: 0.3s;
 
 }
-.btnR{
+.btn:hover{
+    background-color: rgb(201, 201, 201) ;
+    box-shadow: 0px 3px 0px 0px rgb(164, 164, 164);
+}
+#btnReset{
     width: 20.4vh;
     padding: 8px;
     margin: 8px;
@@ -141,21 +145,24 @@ body {
     color: white;
     cursor: pointer;
     transition: 0.3s;
-}
-.btn:hover{
-    background-color: rgb(201, 201, 201) ;
-    box-shadow: 0px 3px 0px 0px rgb(164, 164, 164);
-}
-#btnReset{
     background-color: rgb(113, 113, 203) ;
     box-shadow: 0px 3px 0px 0px rgb(71, 71, 158);
     
 }
 #btnIgual{
+    width: 20.4vh;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
     background-color: rgb(208, 53, 53) ;
     box-shadow: 0px 3px 0px 0px rgb(206, 36, 36);
 }
-#btnIgual:hover{
+#btnIgual:hover, #btnReset:hover{
     background-color: rgb(234, 89, 89) ;
     box-shadow: 0px 3px 0px 0px rgb(227, 68, 68);
 }

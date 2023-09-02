@@ -1,21 +1,32 @@
 var botoes = document.querySelectorAll(".btn")
 var resultado = document.querySelector("#resultado")
-
+var reset = document.querySelector("#btnReset")
+document.getElementById("msgError").style.display = "none"
 
 botoes.forEach(function(botao){
     botao.addEventListener("click", function(){
             var valorBotao = botao.textContent;
-            
+            var msgError = document.getElementById("msgError")
+            msgError.style.display ="none"
 
-            if(valorBotao == "DEL"){
-                resultado.textContent = ""
+
+            //utilizando o RESET para apagar tudo
+            if(valorBotao == "RESET"){
+                resultado.textContent = "";
             }else{
-                resultado.textContent += valorBotao
-                
+                if(valorBotao != "="){
+                    resultado.textContent += valorBotao
+                }else if(valorBotao == "="){
+                    try{
+                    var display = resultado.textContent
+                    display = eval(display)
+                    resultado.textContent = display
+                    }catch(error){
+                        if(msgError.style.display == "none"){
+                            msgError.style.display ="inline"
+                        }
+                    }
+                }
             }
     })
 })
-
-    
-
-
