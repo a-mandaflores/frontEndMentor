@@ -13,10 +13,14 @@ botoes.forEach(function(botao){
             //utilizando o RESET para apagar tudo
             if(valorBotao == "RESET"){
                 resultado.textContent = "";
-            }else{
-                if(valorBotao != "="){
+            }else if(valorBotao == "DEL"){
+                var delResultado = resultado.textContent
+                deletar = delResultado.slice(0,-1)
+                resultado.textContent = deletar
+            }         
+            else if(valorBotao != "="){
                     resultado.textContent += valorBotao
-                }else if(valorBotao == "="){
+            }else{
                     try{
                     var display = resultado.textContent
                     display = eval(display)
@@ -26,7 +30,7 @@ botoes.forEach(function(botao){
                             msgError.style.display ="inline"
                         }
                     }
-                }
             }
+            
     })
 })

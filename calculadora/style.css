@@ -176,3 +176,6 @@ body {
     background-color: rgb(139, 139, 237) ;
     box-shadow: 0px 3px 0px 0px rgb(99, 99, 176);
 }
+#msgError{
+    font-size: 10px;
+}
